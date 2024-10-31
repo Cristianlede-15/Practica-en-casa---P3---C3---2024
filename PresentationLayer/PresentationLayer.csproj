@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC3F36C9-C1F8-47A8-82C6-EAEF851FB016}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PresentationLayer</RootNamespace>
+    <AssemblyName>PresentationLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.8.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracion.Designer.cs">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaVisitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaVisitas.Designer.cs">
+      <DependentUpon>frmConsultaVisitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneral.Designer.cs">
+      <DependentUpon>frmGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarVisita.Designer.cs">
+      <DependentUpon>frmRegistrarVisita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaVisitas.resx">
+      <DependentUpon>frmConsultaVisitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneral.resx">
+      <DependentUpon>frmGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarVisita.resx">
+      <DependentUpon>frmRegistrarVisita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{3c27bd38-d50d-45e0-87b9-9ea650f00271}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{4cb80b1e-20f2-4699-8ce2-585f2e6f70e6}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedEntities\SharedEntities.csproj">
+      <Project>{f5ca801c-31a7-440a-a053-cc64d94d8c9f}</Project>
+      <Name>SharedEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shine %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shine %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMINISTRADOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMINISTRADOR %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMINISTRADOR %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coffee Please.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2813%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONSULTA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2813%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONFIGURACION.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONFIGURACION DE AULAS Y EDIFICIOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONFIGURACION DE AULAS Y EDIFICIOS %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2819%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMIN %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMIN %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMIN %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMIN %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERES ADMIN %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTRATE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTRAr %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTRAr %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTRAr %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONFIGURACION DE AULAS Y EDIFICIOS %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2820%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2819%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BIENBENIDO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2821%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTRAr %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %287%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARTOON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %289%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Centro Médico Avanzado %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Centro Médico Avanzado %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrar Visita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracion de sala por edificio %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracion de Entrada a Edificios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracion de Entrada a Edificios %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %2812%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrar Visita %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracion de entrada a los Edificios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracion de entrada a los Edificios %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar %281%292.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
